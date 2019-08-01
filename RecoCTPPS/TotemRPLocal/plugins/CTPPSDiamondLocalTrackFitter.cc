@@ -60,7 +60,7 @@ CTPPSDiamondLocalTrackFitter::produce( edm::Event& iEvent, const edm::EventSetup
   edm::Handle<edm::DetSetVector<CTPPSDiamondRecHit> > recHits;
   iEvent.getByToken( recHitsToken_, recHits );
 
-  const CTPPSDiamondDetId id_45( 0, 1, 6, 0, 0 ), id_56( 1, 1, 6, 0, 0 );
+  const CTPPSDiamondDetId id_45( 0, 2, 2, 0, 0 ), id_56( 1, 2, 2, 0, 0 );
 
   pOut->find_or_insert( id_45 ); // tracks in 4-5
   edm::DetSet<CTPPSDiamondLocalTrack>& tracks56 = pOut->find_or_insert( id_56 ); // tracks in 5-6

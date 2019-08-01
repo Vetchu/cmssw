@@ -1,6 +1,8 @@
-__init__.py
-*.pyc
+**/__init__.py
+**/*.pyc
 .*.swp
+**/*.cc
+**/*.root
 .#*
 #*#
 *~

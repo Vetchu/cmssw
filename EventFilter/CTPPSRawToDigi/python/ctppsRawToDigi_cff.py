@@ -52,39 +52,45 @@ totemRPRawToDigi.rawDataTag = cms.InputTag("rawDataCollector")
 #  totemRPRawToDigi.RawToDigi.printUnknownFrameSummary = 1
 
 # ---------- diamonds ----------
-totemDAQMappingESSourceXML_TimingDiamond = cms.ESSource("TotemDAQMappingESSourceXML",
-  verbosity = cms.untracked.uint32(0),
-  subSystem = cms.untracked.string("TimingDiamond"),
-  configuration = cms.VPSet(
+#totemDAQMappingESSourceXML_TimingDiamond = cms.ESSource("TotemDAQMappingESSourceXML",
+#  verbosity = cms.untracked.uint32(0),
+#  subSystem = cms.untracked.string("TimingDiamond"),
+#  configuration = cms.VPSet(
     # 2016, before diamonds inserted in DAQ
-    cms.PSet(
-      validityRange = cms.EventRange("1:min - 283819:max"),
-      mappingFileNames = cms.vstring(),
-      maskFileNames = cms.vstring()
-    ),
+#    cms.PSet(
+#      validityRange = cms.EventRange("1:min - 283819:max"),
+#      mappingFileNames = cms.vstring(),
+#      maskFileNames = cms.vstring()
+#    ),
     # 2016, after diamonds inserted in DAQ
-    cms.PSet(
-      validityRange = cms.EventRange("283820:min - 292520:max"),
-      mappingFileNames = cms.vstring("CondFormats/CTPPSReadoutObjects/xml/mapping_timing_diamond.xml"),
-      maskFileNames = cms.vstring()
-    ),
+#    cms.PSet(
+#      validityRange = cms.EventRange("283820:min - 292520:max"),
+#      mappingFileNames = cms.vstring("CondFormats/CTPPSReadoutObjects/xml/mapping_timing_diamond.xml"),
+#      maskFileNames = cms.vstring()
+#    ),
     # 2017
-    cms.PSet(
-      validityRange = cms.EventRange("292521:min - 310000:max"),
-      mappingFileNames = cms.vstring("CondFormats/CTPPSReadoutObjects/xml/mapping_timing_diamond_2017.xml"),
-      maskFileNames = cms.vstring()
-    ),
+#    cms.PSet(
+#      validityRange = cms.EventRange("292521:min - 310000:max"),
+#      mappingFileNames = cms.vstring("CondFormats/CTPPSReadoutObjects/xml/mapping_timing_diamond_2017.xml"),
+#      maskFileNames = cms.vstring()
+#    ),
     # 2018
-    cms.PSet(
-      validityRange = cms.EventRange("310001:min - 999999999:max"),
-      mappingFileNames = cms.vstring("CondFormats/CTPPSReadoutObjects/xml/mapping_timing_diamond_2018.xml"),
-      maskFileNames = cms.vstring()
-    )
-  )
-)
+#    cms.PSet(
+#      validityRange = cms.EventRange("310001:min - 324419:max"),
+#      mappingFileNames = cms.vstring("CondFormats/CTPPSReadoutObjects/xml/mapping_timing_diamond_2018.xml"),
+#      maskFileNames = cms.vstring()
+#    )
+     # 2021
+#    cms.PSet(
+#      validityRange = cms.EventRange("324420:min - 999999999:max"),
+#      mappingFileNames = cms.vstring("CondFormats/CTPPSReadoutObjects/xml/mapping_timing_diamond_2021.xml"),
+#      maskFileNames = cms.vstring()
+#    ) 
+#  )
+#)
 
-from EventFilter.CTPPSRawToDigi.ctppsDiamondRawToDigi_cfi import ctppsDiamondRawToDigi
-ctppsDiamondRawToDigi.rawDataTag = cms.InputTag("rawDataCollector")
+#from EventFilter.CTPPSRawToDigi.ctppsDiamondRawToDigi_cfi import ctppsDiamondRawToDigi
+#ctppsDiamondRawToDigi.rawDataTag = cms.InputTag("rawDataCollector")
 
 # ---------- Totem Timing ----------
 totemDAQMappingESSourceXML_TotemTiming = cms.ESSource("TotemDAQMappingESSourceXML",

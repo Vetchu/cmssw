@@ -9,7 +9,7 @@ from RecoCTPPS.TotemRPLocal.ctppsLocalTrackLiteProducer_cff import ctppsLocalTra
 
 from RecoCTPPS.ProtonReconstruction.ctppsProtons_cff import *
 
-from Geometry.VeryForwardGeometry.geometryRPFromDB_cfi import *
+from Geometry.VeryForwardGeometry.geometryRPFromDD_2021_cfi import *
 
 recoCTPPS = cms.Sequence(
     totemRPLocalReconstruction *

@@ -10,6 +10,8 @@ process.load("Configuration.StandardSequences.MagneticField_38T_cff")
 from Geometry.VeryForwardGeometry.geometryRPFromDD_2018_cfi import XMLIdealGeometryESSource_CTPPS
 
 process.XMLIdealGeometryESSource = XMLIdealGeometryESSource_CTPPS.clone()
+#process.XMLIdealGeometryESSource.rootNodeName = cms.string('cms:CMSE')
+process.XMLIdealGeometryESSource.rootNodeName = cms.string('cms:OCMS')
 
 process.maxEvents = cms.untracked.PSet(
     input = cms.untracked.int32(1)
