@@ -273,9 +273,11 @@ CTPPSGeometryESModule::buildDetGeomDesc( DDFilteredView* fv, DetGeomDesc* gd )
 
       std::cout<<"s"<<copy_num<<std::endl;
       const unsigned int id = copy_num[copy_num.size()-1];
-      const unsigned int arm = copy_num[1]-1;
-      const unsigned int station = copy_num[3]%100/10;
-      const unsigned int rp = copy_num[3]%10;
+      const unsigned int csize= copy_num.size();
+      //const unsigned int arm = copy_num[1]-1;
+      const unsigned int arm = copy_num[csize-4]%1000/100;
+      const unsigned int station = copy_num[csize-4]%100/10;
+      const unsigned int rp = copy_num[csize-4]%10;
       const unsigned int plane = ( id / 100 );
       const unsigned int channel = id % 100;
 
@@ -292,9 +294,11 @@ CTPPSGeometryESModule::buildDetGeomDesc( DDFilteredView* fv, DetGeomDesc* gd )
         throw cms::Exception("DDDTotemRPContruction") << "size of copyNumbers for diamond RP is "
           << copy_num.size() << ". It must be >= 2.";
 
-      const unsigned int arm = copy_num[1] - 1;
-      const unsigned int station = copy_num[3]%100/10;
-      const unsigned int rp = copy_num[3]%10;
+//      const unsigned int arm = copy_num[1] - 1;
+      const unsigned int csize= copy_num.size();
+      const unsigned int arm = copy_num[csize-2]%1000/100;
+      const unsigned int station = copy_num[csize-2]%100/10;
+      const unsigned int rp = copy_num[csize-2]%10;
 
       newGD->setGeographicalID( CTPPSDiamondDetId( arm, station, rp ) );
     }
