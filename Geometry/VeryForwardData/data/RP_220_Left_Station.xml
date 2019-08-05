@@ -141,9 +141,8 @@
         </PosPart>
         <PosPart copyNumber="22">
             <rParent name="RP_220_Left_Station_Vacuum_5"/>
-            <!--<rChild name="CTPPS_Diamond_Detector_Assembly:CTPPS_Diamond_Main_Box"/>
-                 -->
-            <rChild name="CTPPS_Timing_Horizontal_Pot:Primary_Vacuum"/>
+            <rChild name="RP_Box_022:RP_box_primary_vacuum"/>     
+            <!--<rChild name="CTPPS_Timing_Horizontal_P#ot:Primary_Vacuum"/>-->
       	    <rRotation name="rotations:90YX"/>
             <Translation x="-(-[RP_Dist_Beam_Cent:RP_220_Left_Det_Dist_2]-[RP_Box:RP_Box_primary_vacuum_y]/2)" y="0*mm" z="-([RP_220_Left_Prim_Hor_z]-[RP_220_Left_Station_Length]/2)"/>
         </PosPart>

@@ -1,0 +1,9 @@
+----- Begin Fatal Exception 04-Aug-2019 18:42:18 CEST-----------------------
+An exception of category 'CTPPSGeometry' occurred while
+   [0] Processing  Event run: 324420 lumi: 497 event: 1021466417 stream: 0
+   [1] Running path 'p'
+   [2] Calling method for module CTPPSDiamondRecHitProducer/'ctppsDiamondRecHits'
+Exception Message:
+Not found detector with ID 2056257536, i.e. subDet=5 arm=0 station=2 rp=2
+----- End Fatal Exception -------------------------------------------------
+

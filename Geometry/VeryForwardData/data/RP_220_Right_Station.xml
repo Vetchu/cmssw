@@ -140,7 +140,8 @@
         </PosPart>
         <PosPart copyNumber="122">
             <rParent name="RP_220_Right_Station_Vacuum_5"/>
-            <rChild name="CTPPS_Timing_Horizontal_Pot:Primary_Vacuum"/>
+            <!--<rChild name="CTPPS_Timing_Horizontal_Pot:CTPPS_Diamond_Main_Box"/>-->
+            <rChild name="RP_Box_122:RP_box_primary_vacuum"/>
 	    <rRotation name="rotations:90YX"/>
             <Translation x="-(-[RP_Dist_Beam_Cent:RP_220_Right_Det_Dist_2]-[RP_Box:RP_Box_primary_vacuum_y]/2)" y="0*mm" z="[RP_220_Right_Prim_Hor_z]-[RP_220_Right_Station_Length]/2"/>
         </PosPart>
